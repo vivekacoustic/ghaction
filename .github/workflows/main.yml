@@ -39,6 +39,7 @@ jobs:
           git checkout -b "cloned_branch"
           echo "before checkout" && ls .github/workflows/
           git status
+          git add . && git commit -m "replacing file"
           git push dest -f
 
 
