@@ -22,10 +22,10 @@ jobs:
       - name: checkout code
         id: checkout-code-2
         uses: actions/checkout@v3
-        with:
-         token: ${{ secrets.GH_T }}
-         path: gh2
-         fetch-depth: 0
+        # with:
+        #  token: ${{ secrets.GH_T }}
+        #  path: gh2
+        #  fetch-depth: 0
 
       - name: push to other repo
         run: |
