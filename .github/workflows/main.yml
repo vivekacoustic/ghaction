@@ -29,7 +29,7 @@ jobs:
         run: |
           echo "gh1" && cd gh1/.github/workflows/ && ls -a
           #echo "gh2" && ls gh2 -a
-          cp -f gh1/.github/workflows/test.yml gh2/.github/workflows/test.yml
+          cp -f gh1/.github/workflows/test1.yml gh2/.github/workflows/test1.yml
           cd gh2
           git config --global user.name "vivek"
           git config --global user.email "don@example.com"
