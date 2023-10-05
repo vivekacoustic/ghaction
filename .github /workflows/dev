@@ -1,0 +1,13 @@
+name: dev
+on: 
+  workflow_dispatch
+  push:
+    branches: 
+      - '*action'
+jobs:
+  GCP_running_scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        id: checkout-code
+        uses: actions/checkout@v3
