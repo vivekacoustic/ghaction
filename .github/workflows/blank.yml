@@ -1,4 +1,4 @@
-name: dev
+name: feature
 on: 
   workflow_dispatch:
   push:
