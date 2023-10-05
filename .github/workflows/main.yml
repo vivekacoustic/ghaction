@@ -10,13 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        id: checkout-code
+        id: checkout-code-1
         uses: actions/checkout@v3
         with:
          token: ${{ secrets.GH_T }}
+         repo: ghaction
+         ref: main
+         path: gh1
+         
+      - name: checkout code
+        id: checkout-code-2
+        uses: actions/checkout@v3
+        with:
+         token: ${{ secrets.GH_T }}
+         path: gh2
 
       - name: push to other repo
         run: |
+          cp gh1/.github/workflows/test.yml gh2/.github/workflows/test.yml
           git config --global user.name "vivek"
           git config --global user.email "don@example.com"
           git remote add dest https://github.com/vivekacoustic/ghaction.git
