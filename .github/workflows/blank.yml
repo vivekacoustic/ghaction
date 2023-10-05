@@ -1,4 +1,5 @@
 name: feature
+run-name: feature
 on: 
   workflow_dispatch:
   push:
