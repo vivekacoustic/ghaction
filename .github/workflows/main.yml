@@ -28,6 +28,8 @@ jobs:
          #token: ${{ secrets.GH_T }}
 
       - name: push to other repo
+        env:
+         GITHUB_TOKEN: ${{ secrets.GH_T }}
         run: |
           echo "gh1" && ls gh1/.github/workflows/
           echo "gh2" && ls gh2/.github/workflows/
