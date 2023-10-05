@@ -9,9 +9,19 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo feature-branch
       - name: checkout code
         id: checkout-code
         uses: actions/checkout@v3
         with:
          token: ${{ secrets.GH_T }}
+
+      - name: push to other repo
+        run: |
+          git config --global user.name "vivek"
+          git config --global user.email "don@example.com"
+          git remote add dest https://github.com/vivekacoustic/ghaction.git
+          git checkout cloned_branch
+          git push dest --force
+
+
+          
