@@ -32,7 +32,7 @@ jobs:
           echo "gh1" && ls gh1/.github/workflows/
           echo "gh2" && ls gh2/.github/workflows/
           cp -f gh1/.github/workflows/test.yml gh2/.github/workflows/
-          cd gh2
+          cd gh2 && echo "after copy" && ls .github/workflows/
           git config --global user.name "vivek"
           git config --global user.email "don@example.com"
           git remote add dest https://github.com/vivekacoustic/ghaction.git
