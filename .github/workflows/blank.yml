@@ -1,11 +1,11 @@
 name: dev
 on: 
-  workflow_dispatch
+  workflow_dispatch:
   push:
     branches: 
       - '*action'
 jobs:
-  GCP_running_scripts:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
