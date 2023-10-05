@@ -24,6 +24,7 @@ jobs:
         with:
          token: ${{ secrets.GH_T }}
          path: new
+         fetch-depth: 0
 
       - name: push to other repo
         run: |
