@@ -25,7 +25,7 @@ jobs:
         with:
          path: gh2
          fetch-depth: 0
-         #token: ${{ secrets.GH_T }}
+         token: ${{ secrets.GH_T }}
 
       - name: push to other repo
         env:
