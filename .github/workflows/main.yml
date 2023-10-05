@@ -28,6 +28,7 @@ jobs:
 
       - name: push to other repo
         run: |
+          ls parent/.github/workflows/
           cp -f -r parent/.github/workflows/ new/.github/workflows/
           cd new
           git config --global user.name "vivek"
