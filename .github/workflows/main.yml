@@ -27,8 +27,8 @@ jobs:
 
       - name: push to other repo
         run: |
-          echo "gh1" && ls gh1
-          echo "gh2" && ls gh2
+          echo "gh1" && ls gh1 -a
+          echo "gh2" && ls gh2 -a
           cp gh1/.github/workflows/test.yml gh2/.github/workflows/test.yml
           cd gh2
           git config --global user.name "vivek"
