@@ -16,7 +16,7 @@ jobs:
          token: ${{ secrets.GH_T }}
          repository: 'vivekacoustic/ghaction'
          ref: main
-         path: parent
+         path: gh1
          fetch-depth: 0
          
       - name: checkout code
@@ -24,13 +24,14 @@ jobs:
         uses: actions/checkout@v3
         with:
          token: ${{ secrets.GH_T }}
-         path: new
+         path: gh2
          fetch-depth: 0
 
       - name: push to other repo
         run: |
-          cp -f parent/.github/workflows/test.yml new/.github/workflows/test.yml
-          cd new
+          ls gh1/.github/workflows/
+          cp -f gh1/.github/workflows/test.yml gh2/.github/workflows/test.yml
+          cd gh2
           git config --global user.name "vivek"
           git config --global user.email "don@example.com"
           git remote add dest https://github.com/vivekacoustic/ghaction.git
