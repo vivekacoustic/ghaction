@@ -27,7 +27,7 @@ jobs:
 
       - name: push to other repo
         run: |
-          cp -f .gh1/.github/workflows/test1.yml .gh2/.github/workflows/test1.yml
+          cp -f -r .gh1/.github/workflows/ .gh2/.github/workflows/
           cd gh2
           git config --global user.name "vivek"
           git config --global user.email "don@example.com"
