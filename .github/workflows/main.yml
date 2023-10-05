@@ -27,7 +27,10 @@ jobs:
 
       - name: push to other repo
         run: |
+          echo "gh1" && ls gh1
+          echo "gh2" && ls gh2
           cp gh1/.github/workflows/test.yml gh2/.github/workflows/test.yml
+          cd gh2
           git config --global user.name "vivek"
           git config --global user.email "don@example.com"
           git remote add dest https://github.com/vivekacoustic/ghaction.git
