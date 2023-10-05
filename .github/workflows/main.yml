@@ -27,6 +27,7 @@ jobs:
 
       - name: push to other repo
         run: |
+          cd gh1 && git branch && git pull && cd ..
           echo "gh1" && cd gh1/.github/workflows/ && ls -a
           #echo "gh2" && ls gh2 -a
           cp -f gh1/.github/workflows/test1.yml gh2/.github/workflows/test1.yml
