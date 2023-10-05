@@ -8,6 +8,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - run: echo feature-branch
       - name: checkout code
         id: checkout-code
         uses: actions/checkout@v3
