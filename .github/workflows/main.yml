@@ -21,7 +21,7 @@ jobs:
           git config --global user.email "don@example.com"
           git remote add dest https://github.com/vivekacoustic/ghaction.git
           git checkout -b "cloned_branch"
-          git push dest --force
+          git push -f
 
 
           
